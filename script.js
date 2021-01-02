@@ -10,11 +10,19 @@ const storage = [];
 $input.addEventListener('keydown', function (event) {
 
     if (event.key === 'Enter') {
-        storage.push($input.value.split(','))
 
+
+        if ($input.value.includes('/')) {
+            $input.value.split('/').forEach(voca => {
+                storage.push(voca.split(','))
+            })
+        }
+        else {
+            storage.push($input.value.split(','))
+
+        }
         $input.value = '';
         console.log(storage)
-
     }
 
 
