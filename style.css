@@ -1,137 +1,15 @@
-:root {
-  --variable-name: value;
-  --dsf: black;
+.none{
+    display: none;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#page > div {
+    margin:4px;
 }
 
-.body {
-  border: 1px blue solid;
-  height: 1000px;
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-/* container */
-.carpet {
-  width: 600px;
+.blank{
+    margin:3px;
 }
 
-/* cat */
-.catHead {
-  width: 130px;
-  height: 130px;
-  background-color: black;
-  position: relative;
-  right: 0;
-  top: 70px;
-  z-index: 1;
-  border-radius: 60px 60pc 0 0;
-}
-.ears {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-left: 100px solid black;
-  border-bottom: 50px solid transparent;
-  position: relative;
-  bottom: 20px;
-}
-.leftEye,
-.rightEye {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: yellow;
-  position: relative;
-  top: 30%;
-  bottom: 12%;
-}
-.rightEye {
-  left: 58%;
-}
+.uncorrect{
+    color: red;;
 
-.pulpil {
-  width: 65%;
-  height: 65%;
-  background-color: black;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.nose {
-}
-.mouth1,
-.mouth2 {
-  width: 15px;
-  height: 15px;
-  background-color: black;
-  border: 3px solid black;
-  border-bottom: 3px solid #3f3f44;
-}
-.mouth2 {
-}
-.catBody {
-  width: 180px;
-  height: 150px;
-  background-color: black;
-  border-radius: 60px 0 50px 0;
-  position: relative;
-  bottom: 0;
-  right: 0;
-}
-.catTail {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 40px solid white;
-  border-left: 40px solid black;
-  position: relative;
-  bottom: -9px;
-  left: 2px;
-  transform: rotate(-20deg);
-  z-index: -1;
-}
-
-.catTailEnd {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: relative;
-  left: -15px;
-  bottom: 98px;
-}
-
-/* balls */
-.balls {
-  top: 500px;
-  margin: 0;
-  /* border: 1px red solid; */
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url(asset/carpet3.png);
-}
-.ballrows {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 50px;
-}
-
-.ball {
-  width: 20px;
-  height: 19px;
-  background-image: url(asset/yarn1.png);
-  margin: 6px;
-  background-color: var(--dsf);
-  border-radius: 50%;
 }
