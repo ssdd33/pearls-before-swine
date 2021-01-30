@@ -1,7 +1,11 @@
 const $input = document.getElementById('input');
 const $btnTest = document.getElementById('test');
 const $btnCheck = document.getElementById('check');
+const $btnVocabulary = document.querySelector('#vocabulary');
+const $btnBack = document.getElementById('back');
 const $page = document.querySelector('#page');
+let previous = document.querySelector('#page');
+
 
 
 const storage = [];
@@ -32,6 +36,7 @@ $input.addEventListener('keydown', function (event) {
 $btnTest.addEventListener('click', function () {
     $input.classList.add('none');
     $btnCheck.classList.remove('none');
+    $btnVocabulary.classList.remove('none');
     $page.innerHTML = '';
 
     for (let fromIdx = 0; fromIdx < storage.length; fromIdx++) {
@@ -74,7 +79,23 @@ $btnCheck.addEventListener('click', function () {
 
 })
 
+$btnVocabulary.addEventListener('click', () => {
+    previous = document.querySelector('#page');
+    $page.innerHTML = '';
+    $btnCheck.classList.add('none');
+    // $btnBack.classList.remove('none');
+    storage.forEach((voca) => {
+        let [head, ...tail] = voca;
+        let div = document.createElement('div');
+        div.textContent = `${[head]}: ${[tail]}`
+        $page.append(div);
+    })
+})
 
-
+// $btnBack.addEventListener('click', () => {
+//     $btnCheck.classList.remove('none');
+//     $btnBack.classList.add('none');
+//     $page.innerHTML = previous;
+// })
 
     // if (!storage[i].slice(1, storage[i].length).includes(...$vocas[i].querySelector('input').value.split(',')))
